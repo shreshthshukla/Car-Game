@@ -94,7 +94,7 @@ function draw() {
    }
  }
 
- 
+console.log(car.x);
  
   if (gameState === WIN) {
       textSize(50);
@@ -173,6 +173,7 @@ function spawnCar(){
   if(frameCount%60===0){
     var cars = createSprite(car.x+800,(Math.round(random(260,430))))
     cars.lifetime=300;
+    cars.velocityX=-5
     // cars.debug=true;
     cars.setCollider("rectangle",0,0,300,110);
     cars.scale=0.3;
